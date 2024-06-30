@@ -16,7 +16,7 @@ function signUp(){
         info.innerHTML = `<span class="text-danger my-3">All inputs are required</span>`
     }else {
         for (var i = 0; i < users.length; i++) {
-            if(users[i].info.toLowerCase() == signUpEmail.value.toLowerCase()){
+            if(users[i].email.toLowerCase() == signUpEmail.value.toLowerCase()){
                 info.innerHTML = `<span class="text-danger my-3">Email already exist</span>`
                 return false
             }
@@ -34,7 +34,7 @@ function getUserData(){
     }
     users.push(user)
     localStorage.setItem('usersInfo',JSON.stringify(users))
-    location.href = '/index.html'
+    location.href = './index.html'
 }
 
 // events
@@ -55,7 +55,7 @@ function signIn(){
             if(signInEmail.value.toLowerCase() == users[i].email.toLowerCase() && signInPass.value == users[i].pass){
                 checkInput.innerHTML = `<span class="text-success my-3">success</span>`
                 localStorage.setItem('userName',JSON.stringify(users[i].name))
-                location.href = '/home.html'
+                location.href = './home.html'
                 return
             }
         }   
