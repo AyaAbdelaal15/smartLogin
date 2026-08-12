@@ -8,7 +8,7 @@ The project provides a basic authentication flow where users can create an accou
 
 ## 🌐 Live Demo
 
-smart-login-nyrt.vercel.app
+https://smart-login-nyrt.vercel.app/
 
 ---
 
